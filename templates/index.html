@@ -1,0 +1,22 @@
+
+
+
+{% block head %}
+
+<title>EDA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Descriptive Analysis of Dataset</h1>
+
+    <div class="form">
+        <form action="/eda" method="POST">
+            <label for="operation">Fill CSV Path</label>
+            <input type="text" name="path_to_csv" id="path_to_csv">
+            <input type="submit" value="Perform Descriptive Analysis">
+        </form>
+    </div>
+</div>
+{% endblock %}
